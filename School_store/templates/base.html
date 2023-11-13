@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{% block metadescription %}{% endblock %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5bacd37f29.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+        background-color:#5DADE2;
+        }
+        .bg-light{
+        background-color:#B6C5E7;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+{% include 'header.html' %}
+{% include 'navbar.html' %}
+
+{% block content %}
+{% endblock %}
+</div>
+    </div>
+</body>
+
+
+<script src="{% static 'js/popper.min.js' %}" ></script>
+<script src="{% static 'js/bootstrap.min.js' %}" ></script>
+</html>

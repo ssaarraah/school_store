@@ -1,0 +1,56 @@
+<br> <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+
+        <li class="nav-item" style="font-size:15px;">
+          <a class="nav-link" href="/">HOME</a>
+        </li>
+        <li class="nav-item dropdown" style="font-size:15px;">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              | Departments
+          </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science"> Computer Science </a></li>
+
+              <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Commerce"> Commerce  </a></li>
+               <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Humanities"> Humanities </a></li>
+               <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Biology"> Biology Science </a></li>
+               <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science"> Commerce w/ Computer Science  </a></li>
+
+          </ul>
+
+        </li>
+
+
+
+
+
+
+      </ul>
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+        <div style="font-size:15px;">
+              {% if user.is_authenticated %}
+              <a> Hello {{user.username}}! Welcome to School Store :)  </a>
+           <form action="School_credentials/logout" class="inline">
+           <li> Click here to  <button class="float-left button" > Logout </button> </li>
+           </form>
+              {% else %}
+           <form action="School_credentials/login" class="inline">
+           <li> Already have an account? Click here to <button class="float-left submit-button" > Login </button> </li>
+           </form>
+          <form action="School_credentials/register" class="inline">
+           <li> New Here ? Click here to  <button class="float-left submit-button" > Register </button> </li>
+           </form>
+          {% endif %}
+
+
+
+            </div>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+   SCHOOL STORE
+{% endblock %}
+
+
+{% block content %}
+
+<div> <br> <br>
+      {% if user.is_authenticated %}
+    <form action="/order" style="margin: 0 auto;width:350px;font-size:25px;">
+        <button class="float-left submit-button" > Click here to Order your Supplies Now ! </button>
+    </form> <br> <br> <br>
+    {% else %}
+    {% endif %}
+</div>
+<br>
+<div>
+<img class="my_image my_image_padding" src="{% static 'img/schoolbanner.png' %}" alt="sale" width=1550px height=250px>
+</div>
+<br>
+
+<div>
+  <h1 class="text-center my_title"> SCHOOL STORE </h1>
+  <p class="text-justify"> Stationery is an inseparable and essential part of a student’s life. There are many stationery items for which students utilise for their studies at school as well as home. But not many students know their commonly used stationery items well enough. Read here how stationery items are useful for students and its advancement in the past decades.
+
+<br><br>  How is stationery useful for students? <br>
+
+Stationery is the basic requirement for learning, without it, students are incapable of writing down the notes, drawing as well as taking tests
+Stationery is essential for making school projects, assignments
+It is the basic need of any student learning art and crafts, without it, students creativity will be restricted
+Here are some facts about your common stationery items –
+
+Pencil – Pencil commonly made of graphite/lead, wood and clay is an instrument which is used to write. Earlier pencils were made of wood and lead, but now there are mechanical pencils which are the modern form of the pencil which has transformed the pencil allover. Students prefer mechanical pencils as it saves time and efforts of students which are wasted in sharpening the wooden pencil and it is easy to use and can be used for long-term.
+Eraser – Before eraser was invented, our ancestors used wax or raw form of rubber or sandstones to erase the marks. Now eraser is available in various forms with different uses like rubber or gum eraser for pencil marks or kneaded erasers and vinyl erasers for removing marks on soft paper used for drawing. Duster is also an eraser used to remove chalk marks.</p>
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

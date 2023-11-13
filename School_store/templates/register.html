@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta charset="UTF-8">
+    <meta name="description" content="{% block metadescription %}{% endblock %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+<!--     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">-->
+<!--    <script src="https://kit.fontawesome.com/5bacd37f29.js" crossorigin="anonymous"></script>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+
+</head>
+<body>
+    <header>
+       <br> <br>  <img src="{% static 'img/school.png' %}" alt="logimage" width=250px height=150px> &nbsp; &nbsp; <h1>Registration</h1>
+
+    </header>
+    <main>
+        <form action="register" method="post">
+            {% csrf_token %}
+            <div class="form_div">
+                <label>Username:</label>
+                <input class="field_class" type="text" name="username" placeholder="Enter Username" required><br>
+                <label>Password:</label>
+                <input class="field_class" type="password" name="password" placeholder="Enter Password" required><br>
+                <label>Confirm Password:</label>
+                <input class="field_class" type="password" name="password1" placeholder="Confirm Password" required><br>
+                <button class="submit_class" type="submit"> Enter </button>
+
+            </div>
+
+        </form>
+        {% for msg in messages %}
+        <h2> {{msg}} </h2>
+        {% endfor %}
+    </main>
+
+</body>
+<!--<body>-->
+<!--<H2> REGISTER </H2>-->
+<!--<form action="register" method="post">-->
+<!--    {% csrf_token %}-->
+<!--    <input type="text" name="username" placeholder="Enter Username"><br>-->
+<!--     <input type="text" name="first_name" placeholder="Enter First name"><br>-->
+<!--     <input type="text" name="last_name" placeholder="Enter Last Name"><br>-->
+<!--     <input type="email" name="email" placeholder="Enter Email"><br>-->
+<!--     <input type="password" name="password" placeholder="Enter Password"><br>-->
+<!--     <input type="password" name="password1" placeholder="Confirm Password"><br>-->
+<!--    <input type="submit"><br>-->
+
+<!--</form>-->
+<!--{% for msg in messages %}-->
+<!--<h2> {{msg}} </h2>-->
+<!--{% endfor %}-->
+<!--</body>-->
+</html>
